@@ -27,8 +27,8 @@ for i = 1:rounds
     [~, V, U] = krylov_schur_svd(@(x,t) Bmv(x,t,A,Qc(:,1:ell),Qr(:,1:ell)), opts);
     U(irow(1:ell),:) = 0; V(icol(1:ell),:) = 0; 
   end
-  irow(ell+1:i*nr) = cur_deim(U,nr);
-  icol(ell+1:i*nr) = cur_deim(V,nr);
+  irow(ell+1:i*nr) = deim(U,nr);
+  icol(ell+1:i*nr) = deim(V,nr);
   Qc1 = A(:,icol(ell+1:i*nr));
   Qr1 = A(irow(ell+1:i*nr),:)';
   if i > 1
