@@ -33,8 +33,8 @@ while length(irow) < k
   
   rounds_col=[rounds_col length(s)];
   tt = min([length(find(s >= delta*s(1))), k-length(irow), l]);
-  ir = cur_deim(U(:,1:tt),tt);
-  ic = cur_deim(V(:,1:tt),tt);
+  ir = deim(U(:,1:tt),tt);
+  ic = deim(V(:,1:tt),tt);
   irow = [irow ir];
   icol = [icol ic];
   ell = length(irow) - length(ir);
