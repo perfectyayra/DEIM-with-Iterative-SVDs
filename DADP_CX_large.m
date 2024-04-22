@@ -4,7 +4,7 @@ function [irow,icol,M,rounds_irow,rounds_col] = DADP_CX_large(A, k, delta, l)
 % with one-sided projected residual; selects indices per round based on
 % the decay pattern of the singular values
 % for large-scale matrices
-% function [irow, icol, M] = cx_deim_inout_delta_large(A, k, delta, l)
+% function [irow, icol, M] = DADP_CX_large(A, k, delta, l)
 % k = desired number of indices 
 % delta = upper bound on the relative magnitudes of the singular values
 % l = upper bound on the number of singular vectors to be computed per
