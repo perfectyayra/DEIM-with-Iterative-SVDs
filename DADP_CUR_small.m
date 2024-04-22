@@ -1,4 +1,4 @@
-function [irow, icol,M] = cur_deim_inout_delta_small(A, k, delta,l)
+function [irow, icol,M] = DADP_CUR_small(A, k, delta,l)
 
 %CUR_DEIM_INOUT_DELTA_small incurred CUR decomposition with SVD every iteration
 % with two-sided projected residual; selects indices per round based on
