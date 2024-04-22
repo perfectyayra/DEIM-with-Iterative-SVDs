@@ -1,8 +1,8 @@
-function [irow, icol,M] = cur_deim_inout_large(A, k,rounds)
+function [irow, icol,M] = CADP_CUR_large(A, k,rounds)
 
 %CUR_DEIM_INOUT_LARGE incurred CUR decomposition with SVD every iteration with
 %two-sided projected residual; selects constant number of indices per round
-% function [irow, icol, M] = cur_deim_inout_large(A, k, rounds)
+% function [irow, icol, M] = CADP_CUR_large(A, k, rounds)
 % for large-scale matrices
 % k = desired number of indices 
 % rounds = number of iterations ;  rounds | k
