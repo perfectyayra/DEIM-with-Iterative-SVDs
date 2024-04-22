@@ -27,7 +27,7 @@ for i = 1:rounds
     V(icol(1:ell),:) = 0;
   end
   
-  icol(ell+1:i*nr) = cur_deim(V, nr);
+  icol(ell+1:i*nr) = deim(V, nr);
   Q1 = A(:,icol(ell+1:i*nr));
   if i > 1, Q1 = Q1 - Q(:,1:ell)*(Q(:,1:ell)'*Q1); Q1 = Q1 - Q(:,1:ell)*(Q(:,1:ell)'*Q1); end
   [Q(:,ell+1:i*nr), ~] = qr(Q1, 0);
@@ -40,7 +40,7 @@ for i = 1:rounds
     [~, U, ~] = krylov_schur_svd(@(x,t) Bmv(x,t,A',Q(:,1:ell)), opts);
     U(irow(1:ell),:) = 0;
   end
-  irow(ell+1:i*nr) = cur_deim(U, nr);
+  irow(ell+1:i*nr) = deim(U, nr);
   Q1 = A(irow(ell+1:i*nr),:)';
   if i > 1, Q1 = Q1 - Q(:,1:ell)*(Q(:,1:ell)'*Q1); Q1 = Q1 - Q(:,1:ell)*(Q(:,1:ell)'*Q1); end
   [Q(:,ell+1:i*nr), ~] = qr(Q1, 0);
