@@ -1,9 +1,9 @@
-function [irow, icol,M] = cur_deim_inout_small(A, k,rounds)
+function [irow, icol,M] = CADP_CUR_small(A, k,rounds)
 
 %CUR_DEIM_INOUT_SMALL incurred CUR decomposition with SVD every iteration with
 %two-sided projected residual; selects constant number of indices per round
 % for small-scale matrices
-% function [irow, icol, M] = cur_deim_inout_small(A, k, rounds)
+% function [irow, icol, M] = CADP_CUR_small(A, k, rounds)
 % k = desired number of indices 
 % rounds = number of iterations;  rounds | k
 % method = either full svd or limited svd
