@@ -1,4 +1,4 @@
-function [irow,icol,M,rounds_irow,rounds_col] = cx_deim_inout_delta_large(A, k, delta, l)
+function [irow,icol,M,rounds_irow,rounds_col] = DADP_CX_large(A, k, delta, l)
 
 %CX_DEIM_INOUT_DELTA_LARGE incurred CUR decomposition with SVD every iteration
 % with one-sided projected residual; selects indices per round based on
