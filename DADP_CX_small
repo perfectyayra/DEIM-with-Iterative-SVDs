@@ -30,7 +30,7 @@ while length(icol) < k
     V(icol,:) = 0;
   end
   t = min([length(find(s >= delta*s(1))), k-length(icol), l]);
-  ic = cur_deim(V(:,1:t), t);
+  ic = deim(V(:,1:t), t);
   icol = [icol ic];
   M = A(:,icol) \ A;  
 end
@@ -42,7 +42,7 @@ while length(irow) < k
     U(irow,:) = 0;
   end
   t = min([length(find(s1 >= delta*s1(1))), k-length(irow), l]);
-  ir = cur_deim(U(:,1:t), t);
+  ir = deim(U(:,1:t), t);
   irow = [irow ir];  
   M = A / A(irow,:);
 end
