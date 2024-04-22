@@ -1,6 +1,6 @@
 function [sigma, V, U] = krylov_schur_svd_relsigma(A, opts, delta)
 
-%KRYLOV_SCHUR_SVD  Krylov-Schur method for the SVD
+%KRYLOV_SCHUR_SVD  Krylov-Schur method for the SVD adapted to compute the svd based on relative sigma
 % function [sigma, V, U, hist, mvs] = krylov_schur_svd_relsigma(A, opts, delta)
 %
 % Opts can have the following fields:
