@@ -27,8 +27,8 @@ for i=1:rounds
     [U, ~, V] = svd(B,0);  U = U(:,1:nr);  V = V(:,1:nr);
     U(irow(1:ell),:) = 0; V(icol(1:ell),:) = 0; 
   end
-  irow(ell+1:i*nr) = cur_deim(U,nr);
-  icol(ell+1:i*nr) = cur_deim(V,nr);
+  irow(ell+1:i*nr) = deim(U,nr);
+  icol(ell+1:i*nr) = deim(V,nr);
   M = A(:,icol(1:i*nr)) \ (A / A(irow(1:i*nr),:));
 end
 
