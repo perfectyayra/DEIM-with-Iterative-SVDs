@@ -4,12 +4,12 @@ function [irow, icol,M,rounds_col] = DADP_CUR_large(A, k, delta,l)
 % with two-sided projected residual; selects indices per round based on
 % the decay pattern of the singular values
 % for large-scale matrices
-% function [irow, icol, M] = cur_deim_inout_delta_large(A, k, delta,l)
+% function [irow, icol, M] = DADP_CUR_large(A, k, delta,l)
 % k = desired number of indices 
 % delta = upper bound on the relative magnitudes of the singular values
 % l = upper bound on the number of singular vectors to be computed per
 % iteration
-% method = either full svd or limited svd
+% method =  limited svd
 % C = A(:,icol);  R = A(irow,:)
 %
 % See also CUR_DEIM
